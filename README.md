@@ -1,4 +1,4 @@
-# ComputerGraphicProject
+# Computer Graphics Course Project
 
 Simulation of the towers of hanoi problem solution using PyOpenGL.
 

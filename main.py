@@ -20,7 +20,15 @@ def init():
 
     glClearColor(0.3, 0.2, 0.2, 1.0)
     glViewport(0, 0, 1000, 700)
-
+def towers():
+    glBegin(GL_QUADS)
+    glColor4f(0.3, 0.2, 0.2 , 0.1)
+    glVertex3f(0, 0, 0)
+    glVertex3f(3, 0, 0)
+    glVertex3f(8, 6, 0)
+    glVertex3f(0, 7, 0)
+    glEnd()
+    glColor4f(1, 1 ,1, 1)
 def main():
     init()
     while True:
@@ -28,7 +36,7 @@ def main():
             if event.type == pyg.QUIT:
                 pyg.quit()
                 quit()
-        
+        towers()
         pyg.display.flip()
         pyg.time.wait(10)
 

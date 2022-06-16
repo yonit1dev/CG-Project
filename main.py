@@ -20,15 +20,33 @@ def init():
 
     glClearColor(0.3, 0.2, 0.2, 1.0)
     glViewport(0, 0, 1000, 700)
+
+def game_const():
+
+    global moves, max_disks, selected_disks, selected_tower, disk_selected
+
+    moves = 0
+    max_disks = 3
+
+    selected_disks = []
+    selected_tower = 0
+    disk_selected = False
+    
 def towers():
+
+    # Left tower
     glBegin(GL_QUADS)
-    glColor4f(0.3, 0.2, 0.2 , 0.1)
+
     glVertex3f(0, 0, 0)
-    glVertex3f(3, 0, 0)
-    glVertex3f(8, 6, 0)
-    glVertex3f(0, 7, 0)
+    glVertex3f(0, 0, 0)
+    glVertex3f(0, 0, 0)
+    glVertex3f(0, 0, 0)
+
     glEnd()
+
+    # Color overspill protection
     glColor4f(1, 1 ,1, 1)
+
 def main():
     init()
     while True:
